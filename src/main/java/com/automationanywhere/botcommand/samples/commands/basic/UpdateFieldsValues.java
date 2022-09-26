@@ -27,7 +27,7 @@ import static com.automationanywhere.commandsdk.model.DataType.STRING;
 
 /**
  * <pre>
- * updateFieldsValues allows for inserting salesforce objects. ObjectID is returned on successful response as is a success boolean value
+ * updateFieldsValues allows for inserting values into Pipefy's Cards.
  *
  * </pre>
  *
@@ -71,8 +71,8 @@ public class UpdateFieldsValues {
             @Pkg(label = "[[UpdateFieldsValues.pipefyToken.label]]")
             //Ensure that a validation error is thrown when the value is null.
             @NotEmpty
-            String pipefyToken,
-            //SecureString pipefyToken,
+            //String pipefyToken,
+            SecureString pipefyToken,
 
             @Idx(index = "3", type = TEXT)
             //UI labels.
@@ -131,8 +131,8 @@ public class UpdateFieldsValues {
                 StringEntity entity = new StringEntity("query="+URLEncoder.encode(requestBodyString, StandardCharsets.UTF_8), ContentType.APPLICATION_FORM_URLENCODED);
                 HttpClient client = HttpClientBuilder.create().build();
                 HttpPost request = new HttpPost(urlWithParams);
-                //request.addHeader("Authorization", "Bearer " + pipefyToken.getInsecureString());
-                request.addHeader("Authorization", "Bearer " + pipefyToken);
+                request.addHeader("Authorization", "Bearer " + pipefyToken.getInsecureString());
+                //request.addHeader("Authorization", "Bearer " + pipefyToken);
                 request.addHeader("Content-Type", "application/x-www-form-urlencoded");
                 request.setEntity(entity);
 
