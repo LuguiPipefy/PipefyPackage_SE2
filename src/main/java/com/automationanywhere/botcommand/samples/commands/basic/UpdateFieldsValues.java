@@ -151,11 +151,8 @@ public class UpdateFieldsValues {
                 JSONObject jsonResponse = new JSONObject(responseContent.toString());
 
                 if (jsonResponse.get("data") != null) {
-                    JSONObject jsonResponseData = new JSONObject(jsonResponse.get("data").toString());
-                    JSONObject jsonResponseUpdateFieldsValues = new JSONObject(jsonResponseData.get("updateFieldsValues").toString());
-                    JSONObject jsonResponseCard = new JSONObject(jsonResponseUpdateFieldsValues.get("card").toString());
                     //Returning Object ID for success
-                    result = jsonResponseCard.get("id").toString();
+                    result = jsonResponse.get("data").toString();
                 } else {
                     //success wasnt returned, sending error message formatted cleanly for user
                     result = "ResponseCode: "+ Integer.toString(actualResponseCode)  +" Error Occured: "+jsonResponse.getString("errorCode")+", Error Message: "+ jsonResponse.getString(message);

@@ -207,7 +207,7 @@ public class UploadAttachment {
                 //Response should be JSON, read and parse
                 BufferedReader readerAttach = new BufferedReader(new InputStreamReader(responseAttach.getEntity().getContent()));
 
-                while ((line = reader.readLine()) != null) {
+                while ((line = readerAttach.readLine()) != null) {
                     responseContentAttachFile.append(line);
                 }
 
@@ -226,7 +226,7 @@ public class UploadAttachment {
             }
         } catch (Exception e) {
             //including full payload of error so user has full understanding of response from the API
-            result = result + " Exception Occured: " + e.getMessage() + "|| Payload Sent:" + requestBodyString + " || Response Content: " + responseContent.toString() + " || Error Line: " + e.getStackTrace()[0].getLineNumber() ;
+            result = result + " Exception Occured: " + e.getMessage() + "|| Payload Sent:" + requestBodyString + " || Response Content: " + responseContentAttachFile.toString() + " || Error Line: " + e.getStackTrace()[0].getLineNumber() ;
         } finally {
             //Return StringValue.
             return new StringValue(result.toString());
