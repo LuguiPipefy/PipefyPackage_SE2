@@ -81,33 +81,26 @@ public class UploadAttachment {
 
             @Idx(index = "3", type = TEXT)
             //UI labels.
-            @Pkg(label = "[[UploadAttachment.pipeID.label]]", description = "[[UploadAttachment.pipeID.description]]")
-            //Ensure that a validation error is thrown when the value is null.
-            @NotEmpty
-            String pipeID,
-
-            @Idx(index = "4", type = TEXT)
-            //UI labels.
             @Pkg(label = "[[UploadAttachment.cardID.label]]", description = "[[UploadAttachment.cardID.description]]")
             //Ensure that a validation error is thrown when the value is null.
             @NotEmpty
             String cardId,
 
-            @Idx(index = "5", type = TEXT)
+            @Idx(index = "4", type = TEXT)
             //UI labels.
             @Pkg(label = "[[UploadAttachment.fileName.label]]", description = "[[UploadAttachment.fileName.description]]")
             //Ensure that a validation error is thrown when the value is null.
             @NotEmpty
             String  fileName,
 
-            @Idx(index = "6", type = FILE)
+            @Idx(index = "5", type = FILE)
             //UI labels.
             @Pkg(label = "[[UploadAttachment.fileContent.label]]", description = "[[UploadAttachment.fileContent.description]]")
             //Ensure that a validation error is thrown when the value is null.
             @NotEmpty
             String  fileContent,
 
-            @Idx(index = "7", type = TEXT)
+            @Idx(index = "6", type = TEXT)
             //UI labels.
             @Pkg(label = "[[UploadAttachment.fieldID.label]]", description = "[[UploadAttachment.fieldID.description]]")
             //Ensure that a validation error is thrown when the value is null.
