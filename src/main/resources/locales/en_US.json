@@ -95,5 +95,14 @@
 	"UploadAttachment.fileContent": "File",
 	"UploadAttachment.fileContent.description": "File to be inserted",
 	"UploadAttachment.fieldID.label": "Field Id",
-	"UploadAttachment.fieldID.description": "Id of the field to have the file uploaded to"
+	"UploadAttachment.fieldID.description": "Id of the field to have the file uploaded to",
+	"DeleteCard.session.label": "Session Name",
+	"DeleteCard.pipefyToken.label": "Pipefy Token",
+	"DeleteCard.cardID.label": "Card ID",
+	"DeleteCard.cardID.description": "ID of the card being deleted",
+	"DeleteCard.label": "Delete Card",
+	"DeleteCard.description": "Deletes the card by the ID inserted",
+	"DeleteCard.return_label": "Return JSON Content",
+	"DeleteCard.return_description": "Returns the content of the card in JSON format. Use the JSON package to query your JSON structure.",
+	"DeleteCard.node_label": "Delete Card"
 }
